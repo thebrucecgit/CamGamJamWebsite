@@ -51,8 +51,6 @@ function updatetime(endtime) {
     document.getElementById("hours").innerText = t.hours;
     document.getElementById("mins").innerText = t.minutes;
     document.getElementById("secs").innerText = t.seconds;
-  } else {
-    console.log("Countdown is disabled");
   }
 }
 
