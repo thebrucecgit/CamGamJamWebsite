@@ -45,10 +45,15 @@ function setupClock(endtime) {
 
 function updatetime(endtime) {
   const t = getTimeRemaining(endtime);
-  document.getElementById("days").innerText = t.days;
-  document.getElementById("hours").innerText = t.hours;
-  document.getElementById("mins").innerText = t.minutes;
-  document.getElementById("secs").innerText = t.seconds;
+
+  if (document.getElementById("days")) {
+    document.getElementById("days").innerText = t.days;
+    document.getElementById("hours").innerText = t.hours;
+    document.getElementById("mins").innerText = t.minutes;
+    document.getElementById("secs").innerText = t.seconds;
+  } else {
+    console.log("Countdown is disabled");
+  }
 }
 
 function toggle(id) {
